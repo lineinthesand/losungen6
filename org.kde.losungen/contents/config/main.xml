@@ -13,17 +13,22 @@
 
         <!-- color for the text -->
         <entry name="textColor" type="String">
-          <default></default>
+          <default>"#000000</default>
         </entry>
 
         <!-- color1 for the background gradient -->
         <entry name="backgroundColor1" type="String">
-          <default></default>
+          <default>#fdfb96</default>
         </entry>
         <!-- color2 for the background gradient -->
         <entry name="backgroundColor2" type="String">
-          <default></default>
+          <default>#f7f6df</default>
         </entry>
+        <!-- color for the bottom bar -->
+        <entry name="bottomBarColor" type="String">
+          <default>#00f7f6df</default>
+        </entry>
+
 
         <entry name="showDaySelector" type="Bool">
           <default>true</default>

@@ -11,7 +11,7 @@
         "Icon": "losungen",
         "Id": "org.kde.losungen6",
         "Name": "Die Losungen",
-        "Version": "0.6",
+        "Version": "0.6.1",
         "Website": ""
     },
     "KPackageStructure": "Plasma/Applet",

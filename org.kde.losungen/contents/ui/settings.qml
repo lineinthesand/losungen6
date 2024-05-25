@@ -28,6 +28,7 @@ KCM.SimpleKCM {
     property alias cfg_textColor: textColorDialog.selectedColor
     property alias cfg_backgroundColor1: backgroundColor1Dialog.selectedColor
     property alias cfg_backgroundColor2: backgroundColor2Dialog.selectedColor
+    property alias cfg_bottomBarColor: bottomBarColorDialog.selectedColor
     property alias cfg_textFont: textFontDialog.selectedFont;
     property alias cfg_bibleServerURL: bibleServerURL.text;
     property alias cfg_showDaySelector: showDaySelector.checked;
@@ -90,6 +91,22 @@ KCM.SimpleKCM {
             }
         }
 
+        /* button to show/hide color picker */
+        Button {
+            id: bottomBarColor
+
+            Kirigami.FormData.label: qsTr("Bottom bar color") + ": "
+            onClicked: bottomBarColorDialog.open()
+
+            background: Rectangle {
+                implicitHeight: Kirigami.Units.gridUnit
+                implicitWidth: Kirigami.Units.gridUnit
+                /* provide a sample of the current color */
+                color: cfg_bottomBarColor
+                border.width: 1;
+            }
+        }
+
         /* button to show/hide font picker */
         Button {
             id: textFont
@@ -113,13 +130,24 @@ KCM.SimpleKCM {
 
         ColorDialog {
             id: backgroundColor1Dialog;
+            selectedColor: cfg_backgroundColor1
 
             title: qsTr("Select background color 1");
         }
 
         ColorDialog {
+            id: bottomBarColorDialog;
+
+            selectedColor: cfg_bottomBarColor
+            options: ColorDialog.ShowAlphaChannel
+            title: qsTr("Bottom bar background color");
+        }
+
+
+        ColorDialog {
             id: backgroundColor2Dialog;
 
+            selectedColor: cfg_backgroundColor2
             title: qsTr("Select background color 2");
         }
 
@@ -128,6 +156,19 @@ KCM.SimpleKCM {
 
             title: qsTr("Select font");
             visible: false;
+        }
+
+        /* day selector check box */
+        CheckBox {
+            id: showDaySelector
+            Kirigami.FormData.label: qsTr("Show date selector")
+            checked: cfg_showDaySelector
+        }
+
+        CheckBox {
+            id: showWidgetBorder
+            Kirigami.FormData.label: qsTr("Widget border")
+            checked: cfg_showWidgetBorder 
         }
 
         Kirigami.Separator {
@@ -155,19 +196,6 @@ KCM.SimpleKCM {
             }
         }
 
-        /* day selector check box */
-        CheckBox {
-            id: showDaySelector
-            Kirigami.FormData.label: qsTr("Show date selector")
-            checked: cfg_showDaySelector 
-        }
-
-        /* day selector check box */
-        CheckBox {
-            id: showWidgetBorder
-            Kirigami.FormData.label: qsTr("Show widget border")
-            checked: cfg_showWidgetBorder 
-        }
     }
 }
 

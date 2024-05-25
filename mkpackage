@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ $# -eq 1 ]; then
+  PACKAGE_NAME=losungen-${1}.plasmoid
+  echo Making $PACKAGE_NAME
+
+  sed -i "s/\"Version\": .*/\"Version\": \"${1}\",/" org.kde.losungen/metadata.json
+  cat package_content.txt | zip -@ ${PACKAGE_NAME}
+fi

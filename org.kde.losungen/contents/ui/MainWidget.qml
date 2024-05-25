@@ -34,8 +34,8 @@ Rectangle {
     readonly property int marginFrame: 0.75 * Kirigami.Units.gridUnit
 
     gradient: Gradient {
-        GradientStop { position: 0 ; color: plasmoid.configuration.backgroundColor1  }
-        GradientStop { position: 1 ; color: plasmoid.configuration.backgroundColor2  }
+        GradientStop { position: 0 ; color: plasmoid.configuration.backgroundColor1 }
+        GradientStop { position: 1 ; color: plasmoid.configuration.backgroundColor2 }
     }
     radius: radiusFrame
 
@@ -49,6 +49,7 @@ Rectangle {
             id: dateLabel 
             Layout.margins: marginFrame
             Layout.bottomMargin: 0
+            color: plasmoid.configuration.textColor
         }
         LosungDisplay { 
             id: losungsText 
@@ -107,7 +108,6 @@ Rectangle {
                                    + "xml file to the installation directory's data folder, e.g.: \"%4\".<br/>"
                                    + "Note that you might need to remove the widget and re-add it, or log "
                                    + "out and in again for the new file to be recognized.");
-console.log("dataFileName"+ JSON.stringify(mainColumn.losungenData))
                 losungsText.text = message.arg(losungenData.dataFileName).arg(downloadUrl).arg(fileDownloadUrl + xmlZipFile).arg(dataFileLocation);
             }
         }

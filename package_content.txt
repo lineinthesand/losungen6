@@ -1,0 +1,16 @@
+org.kde.losungen/COPYING
+org.kde.losungen/contents/code/functions.js
+org.kde.losungen/contents/config/config.qml
+org.kde.losungen/contents/config/main.xml
+org.kde.losungen/contents/data/Losungen Free 2024.xml
+org.kde.losungen/contents/data/NUTZUNGSBEDINGUNGEN.txt
+org.kde.losungen/contents/data/readme.txt
+org.kde.losungen/contents/icons/sc-apps-losungen.svg
+org.kde.losungen/contents/ui/BottomBar.qml
+org.kde.losungen/contents/ui/LosungDisplay.qml
+org.kde.losungen/contents/ui/LosungenData.qml
+org.kde.losungen/contents/ui/MainWidget.qml
+org.kde.losungen/contents/ui/main.qml
+org.kde.losungen/contents/ui/settings.qml
+org.kde.losungen/icon.svg
+org.kde.losungen/metadata.json

@@ -36,12 +36,13 @@ PlasmoidItem {
 
     /* initialize the plasmoid config defaults */
     function init() {
-        var conf = plasmoid.configuration;
+        var conf = plasmoid.configuration
 
-        if (conf.backgroundColor1 == "") conf.backgroundColor1 = Kirigami.Theme.backgroundColor;
-        if (conf.backgroundColor2 == "") conf.backgroundColor2 = Kirigami.Theme.backgroundColor;
-        if (conf.textFont == "") conf.textFont = Kirigami.Theme.defaultFont;
-        if (conf.textColor == "") conf.textColor = Kirigami.Theme.textColor;
+        if (conf.backgroundColor1 == "") conf.backgroundColor1 = Kirigami.Theme.backgroundColor
+        if (conf.backgroundColor2 == "") conf.backgroundColor2 = Kirigami.Theme.alternateBackgroundColor
+        if (conf.bottomBarColor == "") conf.bottomBarColor = Kirigami.Theme.alternateBackgroundColor
+        if (conf.textFont == "") conf.textFont = Kirigami.Theme.defaultFont
+        if (conf.textColor == "") conf.textColor = Kirigami.Theme.textColor
     }
 
 }
